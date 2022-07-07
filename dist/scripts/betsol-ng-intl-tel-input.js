@@ -176,6 +176,8 @@
            * @returns {boolean}
            */
           function isValidInput (value) {
+            if($element.val() == '') return true;
+            console.log("Invalid input");
             var useWorkaround = ('undefined' !== typeof value);
             if (useWorkaround) {
               var previousValue = $element.val();
